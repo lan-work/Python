@@ -1,1 +1,1 @@
-# Python tasks and excercises
+# Python tasks and exercises
