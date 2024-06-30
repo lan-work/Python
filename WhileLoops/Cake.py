@@ -6,15 +6,15 @@ cake_length = int(input())
 slices_left = int((cake_width * cake_length) / SLICE_SIZE)
 
 while slices_left > 0:
-    command = input()
+    action = input()
 
-    if command == 'STOP':
+    if action == 'STOP':
+        result = f'{slices_left} pieces are left.'
         break
 
-    cake_slice = int(command)
-    slices_left -= cake_slice
-
-if command == 'STOP':
-    print(f'{slices_left} pieces are left.')
+    slices_taken = int(action)
+    slices_left -= slices_taken
 else:
-    print(f'No more cake left! You need {abs(slices_left)} pieces more.')
+    result = f'No more cake left! You need {abs(slices_left)} pieces more.'
+
+print(result)

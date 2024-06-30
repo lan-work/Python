@@ -1,16 +1,16 @@
-GOAL = 10000
+GOAL = 10_000
 
 steps_total = 0
 
 while True:
-    command = input()
+    action = input()
 
-    if command == 'Going home':
+    if action == 'Going home':
         steps_to_home = int(input())
         steps_total += steps_to_home
         break;
 
-    steps = int(command)
+    steps = int(action)
     steps_total += steps
 
     if steps_total >= GOAL:
