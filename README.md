@@ -1,1 +1,1 @@
-# Python tasks and exercises
+# Tasks from Softuni Programing Basics course
