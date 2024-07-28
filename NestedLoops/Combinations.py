@@ -1,10 +1,26 @@
-n = int(input())
-counter = 0
+start = input()
+end = input()
+skip = input()
 
-for i in range(n+1):
-    for j in range(n+1):
-        for k in range(n+1):
-            if i+j+k == n:
-                counter += 1
+start = ord(start)
+end = ord(end)
+skip = ord(skip)
 
-print(counter)
+combinations = 0
+
+for i in range(start, end + 1):
+    if i == skip:
+        continue
+
+    for j in range(start, end + 1):
+        if j == skip:
+            continue
+
+        for k in range(start, end + 1):
+            if k == skip:
+                continue
+
+            print(f'{chr(i)}{chr(j)}{chr(k)}', end=' ')
+            combinations += 1
+
+print(combinations)
